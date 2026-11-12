@@ -18,7 +18,7 @@ A camuflagem resolve o problema do isolamento e do controle do agressor, permiti
 ## 3. Requisitos Funcionais (RF)
 - **RF01 - Módulo Público (Saúde):** O sistema deve permitir o registro do ciclo menstrual, sintomas, humor e fluxo, funcionando como um calendário de saúde completo.
 - **RF02 - Gatilho de Camuflagem:** O sistema deve possuir um mecanismo de ativação secreto (ex: entrar nas configurações e apertar um botão) para transitar da interface de saúde para o portal de apoio.
-RF03 - Botão de Pânico (Quick Escape): O sistema deve conter um botão onipresente na área oculta que, ao ser clicado, volte imediatamente para a tela inicial do controle menstrual.
+- **RF03 - Botão de Pânico (Quick Escape):** O sistema deve conter um botão presente na área oculta que, ao ser clicado, volte imediatamente para a tela inicial do controle menstrual.
 - **RF04 - Comunicação de Emergência:** O sistema deve oferecer um chat integrado e encriptado para contato com redes de apoio (psicológico ou jurídico) e atalhos de discagem rápida/acionamento da DEAM e Ligue 180.
 - **RF05 - Mapa de Acolhimento:** O sistema deve mapear e exibir rotas seguras para abrigos temporários, CRAS e delegacias, baseando-se na geolocalização (solicitada apenas no modo de emergência e sem armazenamento de histórico).
 RF06 - Conteúdo Educativo Offline-First: O sistema deve disponibilizar informações sobre direitos legais e fluxos de denúncia que possam ser acessadas mesmo em conexões instáveis.
