@@ -1,0 +1,163 @@
+// Dados realistas de Delegacias da Mulher (DEAM), Casas-Abrigo e Centros de Referência (CRAS/CRAM)
+// Coordenadas reais para permitir traçado de rotas autêntico via OSRM
+
+export const CITIES = [
+  { id: 'sp', name: 'São Paulo (SP)', center: [-23.55052, -46.633309] },
+  { id: 'rj', name: 'Rio de Janeiro (RJ)', center: [-22.906847, -43.172896] },
+  { id: 'poa', name: 'Porto Alegre (RS)', center: [-30.034647, -51.217658] },
+  { id: 'bh', name: 'Belo Horizonte (MG)', center: [-19.916681, -43.934493] },
+  { id: 'bsb', name: 'Brasília (DF)', center: [-15.7975, -47.8919] },
+  { id: 'ssa', name: 'Salvador (BA)', center: [-12.9777, -38.5016] },
+];
+
+export const MOCK_SHELTERS = [
+  // SÃO PAULO
+  {
+    id: 'sp-deam-1',
+    cityId: 'sp',
+    name: '1ª DEAM - Centro (Casa da Mulher Brasileira)',
+    type: 'deam', // 'deam' | 'shelter' | 'cras'
+    typeName: 'Delegacia Especializada (DEAM)',
+    address: 'R. Vieira Ravasco, 26 - Cambuci, São Paulo - SP',
+    coords: [-23.5602, -46.6231],
+    phone: '(11) 3241-3325',
+    hotline: '180 / 190',
+    hours: 'Plantão 24 Horas',
+    is24h: true,
+    hasShelterBed: true,
+    services: ['Registro de B.O. imediato', 'Medida Protetiva de Urgência', 'Plantão Psicológico', 'Assistência Social'],
+    safeRouteTip: 'Via ampla, com iluminação pública contínua e monitoramento ostensivo.',
+    shelterStatus: 'Vagas de triagem imediata disponíveis',
+    discreetAccess: 'Entrada lateral reservada para proteção da vítima.'
+  },
+  {
+    id: 'sp-deam-2',
+    cityId: 'sp',
+    name: '2ª DEAM - Sul',
+    type: 'deam',
+    typeName: 'Delegacia Especializada (DEAM)',
+    address: 'Av. Onze de Junho, 89 - Vila Clementino, São Paulo - SP',
+    coords: [-23.5992, -46.6433],
+    phone: '(11) 5084-4410',
+    hotline: '180',
+    hours: 'Plantão 24 Horas',
+    is24h: true,
+    hasShelterBed: false,
+    services: ['Medida Protetiva', 'Orientação Jurídica', 'Acolhimento Emergencial'],
+    safeRouteTip: 'Próximo à estação do metrô Santa Cruz com linha segura de ônibus.',
+    shelterStatus: 'Encaminhamento prioritário para abrigo sigiloso',
+    discreetAccess: 'Ambiente reservado com sala lilás acolhedora.'
+  },
+  {
+    id: 'sp-shelter-1',
+    cityId: 'sp',
+    name: 'Casa Abrigo Esperança & Vida (Local Protegido)',
+    type: 'shelter',
+    typeName: 'Casa-Abrigo Sigilosa',
+    address: 'Endereço confidencial sob proteção policial - Região Central',
+    coords: [-23.5435, -46.6412],
+    phone: 'Acionamento direto via 180 ou DEAM',
+    hotline: '180',
+    hours: 'Acolhimento 24h',
+    is24h: true,
+    hasShelterBed: true,
+    services: ['Estadia temporária segura', 'Alimentação completa', 'Acolhimento com filhos menores', 'Apoio psicológico diário'],
+    safeRouteTip: 'Acesso acompanhado por viatura descaracterizada ou guarda civil.',
+    shelterStatus: '6 vagas para mães e filhos pequenos',
+    discreetAccess: 'Total sigilo de endereço físico e ausência de placas externas.'
+  },
+  {
+    id: 'sp-cras-1',
+    cityId: 'sp',
+    name: 'CRAM - Centro de Referência e Atendimento à Mulher Maria de Lourdes',
+    type: 'cras',
+    typeName: 'Centro de Apoio & CRAM',
+    address: 'Rua Dr. Costa Valente, 120 - Brás, São Paulo - SP',
+    coords: [-23.5401, -46.6189],
+    phone: '(11) 2695-4422',
+    hotline: '156 / 180',
+    hours: 'Segunda a Sexta, 08h às 18h',
+    is24h: false,
+    hasShelterBed: false,
+    services: ['Auxílio aluguel social', 'Assistência jurídica gratuita', 'Orientação de emprego e autonomia financeira'],
+    safeRouteTip: 'Acesso fácil por trem e ônibus, comércios abertos no entorno.',
+    shelterStatus: 'Atendimento e encaminhamento a benefícios socioassistenciais',
+    discreetAccess: 'Atendimento individual em sala de escuta privativa.'
+  },
+
+  // PORTO ALEGRE
+  {
+    id: 'poa-deam-1',
+    cityId: 'poa',
+    name: '1ª DEAM de Porto Alegre (Palácio da Polícia)',
+    type: 'deam',
+    typeName: 'Delegacia Especializada (DEAM)',
+    address: 'Av. João Pessoa, 2050 - Azenha, Porto Alegre - RS',
+    coords: [-30.0489, -51.2173],
+    phone: '(51) 3288-2172',
+    hotline: '180 / 197',
+    hours: 'Plantão 24 Horas',
+    is24h: true,
+    hasShelterBed: true,
+    services: ['Sala das Margaridas', 'Medida Protetiva no mesmo dia', 'Apoio Jurídico da Defensoria'],
+    safeRouteTip: 'Avenida principal com pontos de ônibus movimentados.',
+    shelterStatus: 'Triagem imediata e encaminhamento para a Casa Viva Maria',
+    discreetAccess: 'Sala reservada com brinquedoteca para crianças.'
+  },
+  {
+    id: 'poa-shelter-1',
+    cityId: 'poa',
+    name: 'Casa Viva Maria (Acolhimento Municipal)',
+    type: 'shelter',
+    typeName: 'Casa-Abrigo Sigilosa',
+    address: 'Localização protegida por decreto judicial - Zona Sul',
+    coords: [-30.0652, -51.2295],
+    phone: 'Disque 180 ou (51) 3289-5110',
+    hotline: '180',
+    hours: '24 Horas',
+    is24h: true,
+    hasShelterBed: true,
+    services: ['Acolhimento integral', 'Atendimento médico e psicológico', 'Transferência escolar de filhos'],
+    safeRouteTip: 'Rota segura por vias principais.',
+    shelterStatus: 'Vagas abertas com berçário',
+    discreetAccess: 'Portaria blindada e guarda municipal permanente.'
+  },
+
+  // RIO DE JANEIRO
+  {
+    id: 'rj-deam-1',
+    cityId: 'rj',
+    name: 'DEAM Centro - Rio de Janeiro',
+    type: 'deam',
+    typeName: 'Delegacia Especializada (DEAM)',
+    address: 'R. Visconde do Rio Branco, 12 - Centro, Rio de Janeiro - RJ',
+    coords: [-22.9082, -43.1843],
+    phone: '(21) 2332-9968',
+    hotline: '180 / 190',
+    hours: 'Plantão 24 Horas',
+    is24h: true,
+    hasShelterBed: false,
+    services: ['Registro de B.O.', 'Botão do Pânico', 'Medidas Protetivas Eletrônicas'],
+    safeRouteTip: 'Localizado no centro histórico, ao lado da Praça Tiradentes.',
+    shelterStatus: 'Encaminhamento direto para a rede CEAM',
+    discreetAccess: 'Acesso privativo para depoimento protegido.'
+  },
+  {
+    id: 'rj-shelter-1',
+    cityId: 'rj',
+    name: 'Casa Abrigo Lar da Mulher Carioca',
+    type: 'shelter',
+    typeName: 'Casa-Abrigo Sigilosa',
+    address: 'Endereço confidencial - Zona Norte',
+    coords: [-22.8851, -43.2624],
+    phone: 'Via 180 ou Patrulha Maria da Penha (21) 2334-9700',
+    hotline: '180',
+    hours: 'Acolhimento 24h',
+    is24h: true,
+    hasShelterBed: true,
+    services: ['Proteção de alto risco', 'Alimentação e vestuário', 'Cursos de capacitação'],
+    safeRouteTip: 'Condução efetuada em viatura descaracterizada.',
+    shelterStatus: '8 leitos disponíveis',
+    discreetAccess: 'Segurança armada e circuito fechado seguro.'
+  }
+];
